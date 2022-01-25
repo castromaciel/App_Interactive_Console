@@ -95,6 +95,11 @@ class Tasks {
       if ( !task.completedIn ) task.completedIn = new Date().toISOString()
 
     })
+
+    this.listArr.forEach( task => {
+
+      if ( !ids.includes(task.id) ) this._list[task.id].completedIn = null
+    })
   }
 
 }
